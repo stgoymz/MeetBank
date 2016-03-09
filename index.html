@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Meat BanDock</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="grey lighten-4">
+
+		<div class="progress">
+			<div class="indeterminate"></div>
+		</div>
+      <section class="content">
+			<div class="row">
+				<div class="col s12 m6 offset-m3">
+					<div class="card margin-top-15">
+						<form class="white" action="">
+							<div class="card-content deep-purple darken-4 white-text">
+								<span class="card-title">Meat<strong>BanDock</strong></span>
+							</div>
+							<div class="card-content">
+								<div class="row">
+									<div class="input-field col s12">
+										<input id="nombre" type="text" class="validate" required="" aria-required="true" >
+										<label for="nombre">Destinatario</label>
+									</div>
+									<div class="input-field col s6">
+										<input id="monto" type="text" class="numerosInput validate" data-error="Error" data-success="right" required="" aria-required="true" maxlength="9">
+										<label for="monto">Monto</label>
+									</div>
+									<div class="input-field col s6">
+										<input id="fecha" type="date" class="datepicker" class="validate" required="" data-error="Error" data-success="right" aria-required="true">
+										<label for="fecha">Fecha</label>
+									</div>
+								</div>
+							</div>	
+							<div class="card-action right-align">
+								<input id="cursar" class="submit waves-effect waves-light btn orange darken-2 white-text" type="submit" value="Generar">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+      </section>	
+
+		<!-- Modal -->
+		<div id="modalCheque" class="modal">
+			<div class="modal-content  light-green darken-2 white-text">
+				<header class="row no-margin">
+					<div class="col s2">
+						<strong>BancoMeat</strong>	
+					</div>
+					<div class="col s4 center-align">
+						<p>La Concepción 191,Of 808</p>
+						<span class="lighten-5 light-green-text lighten-2">Lugar</span>
+					</div>
+					<div class="col s3 center-align">
+						<p id="printFecha" class="fecha">15/05/1986</p>
+						<span class="lighten-5 light-green-text lighten-2">Fecha</span>
+					</div>
+					<div class="col s3">
+						<strong class="valor left">$</strong><strong id="printMontoNum" class="valor right">00.000</strong>
+					</div>
+				</header>
+			</div>
+			<div class="modal-content">
+				<div class="row">
+					<div class="col s3">
+						<p>Paguese a la orden de:</p>
+					</div>
+					<div class="col s9 border-bottom">
+						<strong id="printNombre">Nombre</strong>
+					</div>
+				</div>
+			</div>
+			<div class="modal-content">
+				<div class="row">
+					<div class="col s2">
+						<p>La suma de:</p>
+					</div>
+					<div class="col s10 border-bottom">
+					<strong id="printMontoText">Número texto</strong>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer  grey lighten-2">
+				<a href="#!" class=" modal-action modal-close waves-effect btn-flat">Close</a>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
