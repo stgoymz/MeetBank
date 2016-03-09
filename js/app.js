@@ -124,7 +124,7 @@ $(document).ready(function() {
 
 	// print cheque
 	$('#cursar').on('click', function(event) {
-		// event.preventDefault();
+		event.preventDefault();
 		var montoNumerico = $('#monto').val();
 		var destinatario = $('#nombre').val();
 		var fecha = $('#fecha').val();
